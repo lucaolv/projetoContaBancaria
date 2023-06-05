@@ -2,6 +2,9 @@ package conta;
 
 import java.util.Scanner;
 
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
+import conta.model.Conta;
 import conta.util.Cores;
 
 public class Menu {
@@ -10,11 +13,32 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 		int opcao;
-
+		
+		Conta c1 = new Conta(2, 2323, 1, "Manoel Gomes", 5000.0f);
+		c1.visualizar();
+		c1.sacar(12000.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
+		
+		ContaCorrente cc1 = new ContaCorrente(1, 2020, 1, "Henrique Dourado", 0.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		ContaPoupanca cp1 = new ContaPoupanca(2, 2121, 2, "Róger Guedes", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+		
 		while (true) {
 
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND);
-			System.out.println("*****************************************************");
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+					+ "*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BRAZIL COM Z                ");
 			System.out.println("                                                     ");
@@ -32,7 +56,7 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     ");
+			System.out.println("                                                     " + Cores.TEXT_RESET);
 			opcao = leia.nextInt();
 
 			if (opcao == 9) {
