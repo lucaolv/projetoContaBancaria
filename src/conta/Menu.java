@@ -23,7 +23,7 @@ public class Menu {
 
 		System.out.println("\nCriar Contas");
 
-		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 123, 1, "João da Silva", 1000f, 100.0f);
+		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 123, 1, "João de Souza", 1000f, 100.0f);
 		contas.cadastrar(cc1);
 
 		ContaCorrente cc2 = new ContaCorrente(contas.gerarNumero(), 124, 1, "Maria da Silva", 2000f, 100.0f);
